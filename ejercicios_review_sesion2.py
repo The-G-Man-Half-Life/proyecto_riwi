@@ -6,10 +6,11 @@ Edad = 17
 Peso = 50,"kg"
 Altura = 1.70,"meters"
 #ejercicio3
-radio = int(input("ingrese el radio del circulo a calculat"))
-areaCirculo = radio**2
-print("el area de su circulo es:areaCirculo")
+radio = int(input("ingrese el radio del circulo a calcular: "))
+areaCirculo = radio*radio
+print(f"el area de su circulo es: {areaCirculo} ")
 #ejercicio4
+
 #ejercicio5
 #ejercicio6
 #ejercicio7
