@@ -10,9 +10,16 @@ radio = int(input("ingrese el radio del circulo a calcular: "))
 areaCirculo = radio*radio
 print(f"el area de su circulo es: {areaCirculo} ")
 #ejercicio4
-float(lista = [1,1.2,2,2.3])
-random_number= (lista)
+Farenheit = "Farenheit" or "farenheit"
+Celsius = "Celsius" or "celsius"
+tipo_temperatura = input("ingrese el tipo de temperatura a convertir(Farenheit o Celsius): ")
+valor = float(input("ingrese el valor: "))
+
+if tipo_temperatura == Farenheit:
+    ecuacion_farenheit_celsius = valor-32/1.8
 #ejercicio5
+    float(lista = [1,1.2,2,2.3])
+random_number= ()
 #ejercicio6
 #ejercicio7
 #ejercicio8
