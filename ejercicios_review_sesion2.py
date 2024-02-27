@@ -112,21 +112,25 @@ choice_dato = type(random.choice(dato_1))
 print("Lo que escribiste es un tipo: ",choice_dato)"""
 #ejercicio6
 """entrada = input("Hola: ")
-if len(entrada) <= 1:
+if len(entrada) == 0:
    print("No hay texto")
 else:
-   print("Adios")"""
-#ejercicio7
+   print("Adios")
+#ejercicio7"""
 
 #ejercicio8
+"""input_usuario = input(("Decida palta o aguacate: " ))
+verificacion_decision = input_usuario== "aguacate" or "Aguacate"==True
+print("Su decision es: ", verificacion_decision)"""
+
 #ejercicio9
+"""variable_aleatoria = input("Escriba nada: ")
+variable_aleatoria = None
+print(type(variable_aleatoria))"""
 #ejercicio10
+
 #ejercicio11
 #ejercicio12
 #ejercicio13
 #ejercicio14
 #ejercicio15
-#hola
-#hola2
-
-#datos -credenciales
