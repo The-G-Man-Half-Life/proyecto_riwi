@@ -107,8 +107,17 @@ elif class_int:
     print("El numero ", random_number_choice, " es entero o clase int")"""
 
 #ejercicio5
+"""dato_1 =('aguacate', 1,2,3, 'palta')
+choice_dato = type(random.choice(dato_1))
+print("Lo que escribiste es un tipo: ",choice_dato)"""
 #ejercicio6
+"""entrada = input("Hola: ")
+if len(entrada) <= 1:
+   print("No hay texto")
+else:
+   print("Adios")"""
 #ejercicio7
+
 #ejercicio8
 #ejercicio9
 #ejercicio10
