@@ -76,16 +76,16 @@ cadenas.sort()
 #print(cadenas)
 
 cadenas = ["Manzana", "MANZANA", "manZana", "manzana","manzanA", "PERA", "Pera", "pEra", ]
-"""sorted(variable) se encarga de organizar una lista teniendo como prioridad lo siguiente:
-1.palabras completamente en mayusculas
-2.palabras con mayusculas yendo en orden(primero hacia ultimo)
-3.palabras con minusculas 
-NOTA: Si hay varias palabras con las mismas condiciones se tendera a ir en orden alfabetico
+#sorted(variable) se encarga de organizar una lista teniendo como prioridad lo siguiente:
+#1.palabras completamente en mayusculas
+#2.palabras con mayusculas yendo en orden(primero hacia ultimo)
+#3.palabras con minusculas 
+#NOTA: Si hay varias palabras con las mismas condiciones se tendera a ir en orden alfabetico
 sorted(cadenas)
-print(sorted(cadenas))"""
+print(sorted(cadenas))
 
 
-numeros = [12, 55, 89, 100, 89, 90]
+"""numeros = [12, 55, 89, 100, 89, 90]
 numeros2 = [11, 13, 14]
 
 for i in numeros2:
@@ -99,4 +99,4 @@ for a in numeros:
 for b in range(contador):
     numeros.remove(numeroABorrar)
 
-print(numeros)
+print(numeros)"""
