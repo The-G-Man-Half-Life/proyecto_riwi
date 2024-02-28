@@ -82,4 +82,4 @@ cadenas = ["Manzana", "MANZANA", "manZana", "manzana","manzanA", "PERA", "Pera",
 3.palabras con minusculas 
 NOTA: Si hay varias palabras con las mismas condiciones se tendera a ir en orden alfabetico
 sorted(cadenas)
-print(sorted(cadenas))
+print(sorted(cadenas))"""
