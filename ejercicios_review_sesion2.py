@@ -147,14 +147,12 @@ print("Es ", cadena, " alfaunimerico: ",verificar_sialfanumerica)"""
 tipo_dato = type(booleano15)
 print("El tipo de dato de la expresion booleana es: ", tipo_dato)"""
 #ejercicio15
-variables_inmutables = ["<class 'bool'>","<class 'complex'>","<class 'int'>","<class 'float'>","<class 'frozenset'>", "<class 'str'>","<class 'tuple'>","<class 'bytes'>","<class 'range'>"]
-datoUsuario = input("Ingrese un elemento cualquiera: ")
-Type_datoUsuario = type(datoUsuario)
-contador = 0
-for i in variables_inmutables:
-    if i==Type_datoUsuario and contador == 0:
-        print(f"El dato: {datoUsuario}, de tipo: {Type_datoUsuario}, es inmutable") 
+datoUsuario = 4
+verificacion_tipo = type(datoUsuario)
+tipo_datoUsuario = (datoUsuario, (bool,complex,int,float,frozenset,str,tuple,range,bytes))
+
+if tipo_datoUsuario ==True:
+    print(f"El dato: {datoUsuario}, de tipo: {verificacion_tipo}, es inmutable") 
+else:
+     print(f"El dato: {datoUsuario}, de tipo: {verificacion_tipo}, es mutable") 
         
-    elif contador == 1:
-        print(f"El dato: {datoUsuario}, de tipo: {Type_datoUsuario}, es mutable") 
-        contador +1
