@@ -112,21 +112,49 @@ choice_dato = type(random.choice(dato_1))
 print("Lo que escribiste es un tipo: ",choice_dato)"""
 #ejercicio6
 """entrada = input("Hola: ")
-if len(entrada) <= 1:
+if len(entrada) == 0:
    print("No hay texto")
 else:
-   print("Adios")"""
-#ejercicio7
+   print("Adios")
+#ejercicio7"""
 
 #ejercicio8
-#ejercicio9
-#ejercicio10
-#ejercicio11
-#ejercicio12
-#ejercicio13
-#ejercicio14
-#ejercicio15
-#hola
-#hola2
+"""input_usuario = input(("Decida palta o aguacate: " ))
+verificacion_decision = input_usuario== "aguacate" or "Aguacate"==True
+print("Su decision es: ", verificacion_decision)"""
 
-#datos -credenciales
+#ejercicio9
+"""variable_aleatoria = input("Escriba nada: ")
+variable_aleatoria = None
+print(type(variable_aleatoria))"""
+#ejercicio10
+"""variable_prueba10 = int(input("Escribe un numero: "))
+verificar_int = print(f"El numero {variable_prueba10} es una variable de tipo: {type(variable_prueba10)}")"""
+#ejercicio11
+"""resultado = 1 + 2.2
+print(f"El numero {resultado} pertenece a la clase{type(resultado)}")"""
+#ejercicio12
+"""lista_12 =[1,2,3,4,5,6]
+tupla_12 =(1,2,3,4,5,6)
+print(f"El elemento lista 12 es de clase {type(lista_12)}")
+print(f"El elemento tupla 12 es de clase {type(tupla_12)}")"""
+#ejercicio13
+"""cadena = "Aguacate"
+verificar_sialfanumerica = cadena.isalnum()
+print("Es ", cadena, " alfaunimerico: ",verificar_sialfanumerica)"""
+#ejercicio14
+"""booleano15 = True
+tipo_dato = type(booleano15)
+print("El tipo de dato de la expresion booleana es: ", tipo_dato)"""
+#ejercicio15
+variables_inmutables = ["<class 'bool'>","<class 'complex'>","<class 'int'>","<class 'float'>","<class 'frozenset'>", "<class 'str'>","<class 'tuple'>","<class 'bytes'>","<class 'range'>"]
+datoUsuario = input("Ingrese un elemento cualquiera: ")
+Type_datoUsuario = type(datoUsuario)
+contador = 0
+for i in variables_inmutables:
+    if i==Type_datoUsuario and contador == 0:
+        print(f"El dato: {datoUsuario}, de tipo: {Type_datoUsuario}, es inmutable") 
+        
+    elif contador == 1:
+        print(f"El dato: {datoUsuario}, de tipo: {Type_datoUsuario}, es mutable") 
+        contador +1
