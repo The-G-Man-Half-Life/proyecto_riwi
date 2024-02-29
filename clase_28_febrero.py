@@ -29,17 +29,27 @@ def sumar_numeros_encapsulados(lista):
 lista_notas = [3,5,4,3,4,5,5]
 resultado_lista = sumar_numeros_encapsulados(lista_notas)
 print("la suma de la lista es: ", resultado_lista)
-
+"""
 #ejemplo3
+"""
 def calcular_promedio(numeros):
     promedio = sum(numeros)/len(numeros)
     return promedio
 
 #llamado a la funcion
-lista_aleatoria = [1,2,3,4,5]
-promedio_lista_aleatoria = calcular_promedio(lista_aleatoria)
-print("El promedio de la lista aleatoria es:", promedio_lista_aleatoria)
-
+lista_aleatoria = []
+peticion = input(str("Desea ingresar mas numeros (si/no):"))
+x =peticion.lower()
+while x == "si":
+    insercion_numeros = int(input("Ingrese un numero entero: "))
+    lista_aleatoria.append(insercion_numeros)
+    peticion = input("Desea ingresar mas numeros: ")
+    x =peticion.lower()
+if x == "no":
+    promedio_lista_aleatoria = calcular_promedio(lista_aleatoria)
+    print("El promedio de la lista aleatoria es:", promedio_lista_aleatoria)
+    """
+"""
 #ejemplo4
 def contar_cantidad_palabras(frase):
     palabras= frase.split()
@@ -85,7 +95,7 @@ def pedir_documentos(nombre,informacion):
 
 pedir_nombre = input ("dele nombre a su archivo:")
 pedir_informacion = input("agrege la informacion a su archivo:")
-guardado_informacion_documento = pedir_documentos(pedir_nombre,pedir_informacion)"""
+guardado_informacion_documento = pedir_documentos(pedir_nombre,pedir_informacion)
 
 #sobre los diccionarios
 
@@ -124,4 +134,4 @@ print(mi_diccionario.clean())
 #agregar cifras decimales
 valor = float(30.001)
 
-#problema1: calcular
+#problema1: calcular"""
