@@ -1,27 +1,60 @@
-# ingreesar info
-#calcular el totla de la factura 
-#imprimir info y calculo
+# ingresar info
+print("-----Bienvenido a tiendo D2-----\n")
+print("-----Mejor que tiendas D1-----\n")
 
-name = input("ingresa tu nombre") # name = ju
-last_name = input("ingrese su apellido") # last_name = la
-credentialsId= input("ingresa tu id") #credentrialId = 3
+print("Ingrese su nombre")
+name = input(": \n") 
+print("ingrese su apellido: ") 
+last_name = input(": \n")
+print("ingresa tu id: ") 
+credentialsId= input(": \n") 
+ 
+
+def  leer_datos():
+    print("Ingrese su nombre")
+    name = input(": \n") 
+    print("ingrese su apellido: ") 
+    last_name = input(": \n")
+    print("ingresa tu id: ") 
+    credentialsId= input(": \n") 
+    return print(name,last_name,credentialsId)
 
 products={}
 
-def calcular_factura(name, last_name, credentialsId):
+#calcular el total de la factura 
+def calcular_factura(name,last_name,credentialsId):
     while True:
-        print("elige la opcion")
-        print("1. añadir producto")
-        print("2. generar factura")
+        print (name, last_name, credentialsId)
+        print("***Elige una opcion:*** ")
+        print("\n1. Cambiar sus datos")
+        print("2. Agregar un producto nuevo a la factura")
+        print("3. añadir producto")
+        print("4. Generar factura")
+        print("5. Apagar programa\n")
+
+
         option = input("opcion: ")
         if option == "1":
-            #añadir producto
-            addProduc= input("add name product")
-            addPrice= input("add price product")
-            products[addProduc]=int(addPrice)
+            leer_datos()
+
         elif option == "2":
+            #añadir producto
+            print("-----------------------------------------------")
+            addProduct= input("\nEscribe el nombre del producto: ")
+            addPrice= input("Añade el precio del producto: \n")
+            products[addProduct]=int(addPrice)
+
+            
+        elif option == "4":
+
+            #checar valor producto para caso 4
+            for i in products.values():
+                if i == 500000:
+                    productoEspecial = True
+                else:
+                    productoEspecial = False
             #generar factura
-            print("MERCADO MATEOS")
+            print("------MERCADO MATEOS------")
             print(f"Nombre : {name}")
             print(f"Apellido :{last_name}")
             print("ID :",credentialsId)
@@ -31,23 +64,24 @@ def calcular_factura(name, last_name, credentialsId):
             totalSiIva = totalNoIva + totalNoIva*0.19
             print("total con iva", totalSiIva)
             print("products", len(products))
-            if  (3<=len(products) < 5):
-                subtotal_caso1 = totalSiIva - totalSiIva * 0.05
-                print("caso 1", subtotal_caso1)
+
+            if productoEspecial==True :
+                print("El Total de su producto es: ",totalNoIva)
+
+            elif (7<=len(products)):
+                print("obtuviste un bono de 100k")
+
             elif (5<=len(products) < 7):
                 subtotal_caso2 = totalSiIva - totalSiIva*0.10
                 print("caso 2", subtotal_caso2)
-            elif (7<=len(products)):
-                print("obtuviste un bono de 100k")
+
+            elif  (3<=len(products) < 5):
+                subtotal_caso1 = totalSiIva - totalSiIva * 0.05
+                print("caso 1", subtotal_caso1)
+            
             break
     return
             
                     
-calcular_factura(name, last_name, credentialsId)
 
-#logica de descuentos
-
-    
-    
-    
-  
+calcular_factura(name,last_name,credentialsId)
