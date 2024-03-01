@@ -2,22 +2,22 @@
 print("-----Bienvenido a tiendo D2-----\n")
 print("-----Mejor que tiendas D1-----\n")
 
-
 def  leer_datos():
     print("Ingrese su nombre")
-    global name = input(": \n") 
+    name = input(": \n") 
     print("ingrese su apellido: ") 
-    global last_name = input(": \n")
+    last_name = input(": \n")
     print("ingresa tu id: ") 
-    global credentialsId= input(": \n") 
-    return print(name,last_name,credentialsId)
+    credentialsId= input(": \n") 
+    
+
 
 products={}
 
 #calcular el total de la factura 
-def calcular_factura(name,last_name,credentialsId):
+def calcular_factura():
     while True:
-        print (name, last_name, credentialsId)
+        leer_datos()
         print("***Elige una opcion:*** ")
         print("\n1. Cambiar sus datos")
         print("2. Agregar un producto nuevo a la factura")
@@ -28,7 +28,13 @@ def calcular_factura(name,last_name,credentialsId):
 
         option = input("opcion: ")
         if option == "1":
-            leer_datos()
+            print("Ingrese su nombre")
+            name1 = input(": \n") 
+            print("ingrese su apellido: ") 
+            last_name1 = input(": \n")
+            print("ingresa tu id: ") 
+            credentialsId1 = input(": \n") 
+            leer_datos(name1,last_name1,id)
 
         elif option == "2":
             #añadir producto
@@ -77,4 +83,4 @@ def calcular_factura(name,last_name,credentialsId):
             
                     
 
-calcular_factura(name,last_name,credentialsId)
+calcular_factura()
