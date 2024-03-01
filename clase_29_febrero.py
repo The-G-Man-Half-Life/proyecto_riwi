@@ -1,69 +1,80 @@
-#Ejercicio 1 - Modulo 1 - Filtro 1
-
-"""Desarrolle un programa que permita a un usuario ingresar informacion sobre varios productos comprados por un cliente.
- El programa debe calcular el total de la factura, aplicar descuentos y mostrar el recibo detallado de la compra."""
-
-#Este funcion se encarga de organizar los datos del usuario y almacenarlos dentro de una lista para luego imprimirlos
-def datos (nombre_input, apellidos_input, documentos_input):
-    #lista donde se almacenan
-    Datos_usuario = []
-    #almacenart datos en lista
-    Datos_usuario.append(nombre_input)
-    Datos_usuario.append(apellidos_input)
-    Datos_usuario.append(documentos_input)
-    #imprimir datos
-    a = print(f"Bienvenido: {Datos_usuario[0]} {Datos_usuario[1]} \nCon documento:{Datos_usuario[2]}")
-    return   a
-
-#funcion para mostrar los productos
-Lista_productos = {'peluche' : 100000, 'drone' : 250000, 'ak_juguete': 400000 }
-def productos (decision):
-    
-    mostrar = print(Lista_productos.items()) if decision == True  else None 
-    return mostrar
-
-#funcion para sumar precio de los productos
-productos_del_usuario = []
-def sumar_precios_productos ():
-     producto_a = input("Ingrese el nombre del producto que desea comprar")
-     productos_del_usuario.append(starter)
-     decision_2 = input("Desea ingresar mas productos")
-     decision_2.lower()
-
-     
-
-#mostrar opciones
-def menu_opciones(bool):
-    lista_opciones = {'(1)':'Volver a registrar el documento, nombres, apellidos de usted',
-                      '(2)':'Registrar un nuevo producto a la factura',
-                      '(3)':'Listar productos actuales en la factura',
-                      '(4)':'Mostrar factura' }
-    if bool ==True:
-        print("Que desea hacer")
-
-        lista_opciones = {'(1)':'Volver a registrar el documento, nombres, apellidos del cliente','(2)':'Registrar un nuevo producto a la factura','(3)':'Listar productos actuales en la factura','(4)':'Mostrar factura' }
-    
-    print(lista_opciones.items())
-
-    decision = int(input("Escriba el numero de la opcion que desee realizar"))
-    return decision
-
-print(menu_opciones)
+# ingresar info
+print("-----Bienvenido a tiendo D2-----\n")
+print("-----Mejor que tiendas D1-----\n")
 
 
+def  leer_datos():
+    print("Ingrese su nombre")
+    global name = input(": \n") 
+    print("ingrese su apellido: ") 
+    global last_name = input(": \n")
+    print("ingresa tu id: ") 
+    global credentialsId= input(": \n") 
+    return print(name,last_name,credentialsId)
+
+products={}
+
+#calcular el total de la factura 
+def calcular_factura(name,last_name,credentialsId):
+    while True:
+        print (name, last_name, credentialsId)
+        print("***Elige una opcion:*** ")
+        print("\n1. Cambiar sus datos")
+        print("2. Agregar un producto nuevo a la factura")
+        print("3. añadir producto")
+        print("4. Generar factura")
+        print("5. Apagar programa\n")
 
 
-"""if decision == 1:
-    nombre = input("ingrese su nombre: ")
-    apellido = input("ingrese su apellido: ")
-    documento = input("ingrese su documento: ")
-    a = datos(nombre, apellido, documento)
-    print(a)
+        option = input("opcion: ")
+        if option == "1":
+            leer_datos()
 
-elif  decision ==2:
-    acceso = True
-    print(productos(acceso))
+        elif option == "2":
+            #añadir producto
+            print("-----------------------------------------------")
+            addProduct= input("\nEscribe el nombre del producto: ")
+            addPrice= input("Añade el precio del producto: \n")
+            products[addProduct]=int(addPrice)
 
-elif decision ==3:"""
+            
+        elif option == "4":
 
-"""def caso_1 ():def caso_2 ():def caso_3 ():def caso_4productos"""
+            #checar valor producto para caso 4
+            for i in products.values():
+                if i == 500000:
+                    productoEspecial = True
+                else:
+                    productoEspecial = False
+            #generar factura
+            print("------MERCADO MATEOS------")
+            print(f"Nombre : {name}")
+            print(f"Apellido :{last_name}")
+            print("ID :",credentialsId)
+            print("productos: ", products.keys())
+            totalNoIva= sum(products.values())
+            print("total sin iva", totalNoIva)
+            totalSiIva = totalNoIva + totalNoIva*0.19
+            print("total con iva", totalSiIva)
+            print("products", len(products))
+
+            if productoEspecial==True :
+                print("El Total de su producto es: ",totalNoIva)
+
+            elif (7<=len(products)):
+                print("obtuviste un bono de 100k")
+
+            elif (5<=len(products) < 7):
+                subtotal_caso2 = totalSiIva - totalSiIva*0.10
+                print("caso 2", subtotal_caso2)
+
+            elif  (3<=len(products) < 5):
+                subtotal_caso1 = totalSiIva - totalSiIva * 0.05
+                print("caso 1", subtotal_caso1)
+            
+            break
+    return
+            
+                    
+
+calcular_factura(name,last_name,credentialsId)
