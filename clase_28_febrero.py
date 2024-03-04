@@ -82,8 +82,8 @@ def es_palindromo(cadena):
 
 palabra1 = "Hola world"
 palabra2 = "Anita lava la tina"
-es_palindromo[palabra1]
-es_palindromo[palabra2]
+es_palindromo(palabra1)
+es_palindromo(palabra2)
 
 #problema 4
 def pedir_documentos(nombre,informacion):
