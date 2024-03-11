@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+         <title> Home</title>
+         <meta charset = "UTF-8"/>
+         <meta name = "viewport" content = "width=device_width"
+    </head>
+
+    <body>
+        <h1>Approach to Front End Testing</h1>
+        <p>Netflix Technology blog by Moshe Kolodny </p>
+        <h3> URL image:</h3>
+        <img src = https://imgs.search.brave.com/JZx1bnvsmsiTDzBlsQrFAXrbFKhYKLpNpzn_N_Rc8fg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bmV0Z3VydS5jb20v/aHMtZnMvaHViZnMv/VHlwZXMlMjBvZiUy/MGZyb250ZW5kJTIw/dGVzdHMlMjAoMSku/anBlZz93aWR0aD03/MDAmbmFtZT1UeXBl/cyUyMG9mJTIwZnJv/bnRlbmQlMjB0ZXN0/cyUyMCgxKS5qcGVn>
+        <p> in this post, weŕe excited to introduce SafeTest, 
+            a revolutionary 
+            library that offers a fresh
+            perspective on End-To-End (E2E)
+            tests for web-based User Interface(UI) applications.
+        </p>
+        <h3> The Challenges of Traditional UI Testing</h3>
+        <p> Traditionally, UI tests have been conducted through either unit testing or integration testing (also referred to as
+        End-To-End (E2E) testing). However, each of these methods presents a unique trade-off: you have to choose between
+        controlling the test fixture and setup, or controlling the test driver.
+        </p>
+        <p>
+        For instance, when using react-testing-library, a unit testing solution, you maintain complete control over what to
+        render and how the underlying services and imports should behave. However, you lose the ability to interact with an
+        actual page, which can lead to a myriad of pain points:
+        </p>
+        <ul>
+            <li>Difficulty in interacting with complex UI elements like &lt;Dropdown/&gt; components</li>
+            <li>Inability to test CORPS setup or GraphQL calls.</li>
+            <li>Lack of visibility into z-index issues affecting click-ability of buttons.</li>
+            <li>Complex and inuntuitive authoring and debugging of tests.</li>
+        </ul>
+        <p> Conversely, using integration testing tools like Cypress or Playwright provides control over the page, but sacrifices 
+            the ability to instrument the bootstrapping code for the app. These tools operate by remotely controlling a browser to
+            visit a URL and interact with the page.</p>
+        <p>This approach has its own set of challenges:</p>
+
+        <ul>
+            <li>Difficulty in making calls to an alternative API endpoint without implementing custom network layer API rewrite rules.</li>
+            <li>Inability to make assetions on spies/mocks or execute code within the app.</li>
+            <li>Testing something like dark mode entails clicking the theme switcher or knowing the localStorage mechanism to override.</li>
+            <li>Inability to test segments of the app, for example if a component is only visible after clicking a button for a 60 
+                second timer to countdown, the test will need to run those actions and will be at least a minute long.</li>
+        </ul>
+        <p> 
+            Recognizing these challenges, solutions like E2E component Testing have emerged, with offerings from Cypress and Playwright.
+            . While these tools attempt to rectify the shortcomings of traditional integration testing methods, they have other limitations due to 
+            their architecture.
+        </p>
+        <p>
+            They start a dev server with bootstrapping code to load the component and/or setup code you want, which limits their ability
+            to handle complex enterprise  applications that might have OAuth or a complex build pipeline. Moreover, updating TypeScript usage could break your
+            tests until the Cypress/Playwright team updates their runner.
+        </p>
+        <h3> Welcome to SafeTest</h3>
+        <p>SafeTest aims to address these issues with a novel approach to UI testing. The main idea is to have a snippet of code in
+        our application bootstrapping stage that injects hooks to run our tests (see the How Safetest Works sections for more
+        info on what this is doing).<strong> Note that how this works has no measurable impact on the regular usage of your app since
+        SafeTest leverages lazy loading to dynamically load the tests only when running the tests (in the README example, the
+        tests aren’t in the production bundle at all).</strong> Once that’s in place, we can use Playwright to run regular tests, thereby
+        achieving the ideal browser control we want for our tests.</p>
+        <p> This approach also unlocks some exciting features: </p>
+        <ul>
+            <li>Deep linking to a specific test without needing to run a node test server.</li>
+            <li>Two-way communication between the browser and test (node) context.</li>
+            <li>Access to all the DX features that come with Playwright (excluding the ones that come with @playwright/test).</li>
+            <li>Video recording of tests, trace viewing, and pause page functionality for trying out different page selectors/actions.</li>
+            <li>Ability to make assertions on spies in the browser in node, matching snapshot of the call within the browser.</li>
+        </ul>

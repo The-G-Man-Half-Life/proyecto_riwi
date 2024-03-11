@@ -21,50 +21,65 @@ def experiencia_laboral_():
     experiencia_laboral[Nombre] = años_experiencia
     print("****************************")
 def empresas_trabajadas_():
-    Bandera = True
-    while Bandera==True:
+
+    while True:
         empresas_laburadas = (input("Por favor ingrese UNA empresa en la cual ha laburado: ")).lower().capitalize()
-        empresas_trabajadas[Nombre].append(empresas_laburadas)
+        empresas_trabajadas[Nombre]= [empresas_laburadas]
         option = input("Desea ingresar mas empresas(si/no): ").lower()
 
         if option == "si":
-            empresas_laburadas = input("Por favor ingrese UNA empresa en la cual ha laburado: ")
+            empresas_laburadas = input("Por favor ingrese UNA empresa en la cual ha laburado: ").lower().capitalize()
             empresas_trabajadas[Nombre].append(empresas_laburadas)
-            option = input("Desea ingresar mas empresas(si/no): ").lower()
+            option = input ("Desea ingresar mas empresas(si/no): ").lower()
+            if option == "si":
+                pass
+            elif option == "no":
+                print("**********************")
+                break
 
         elif option == "no":
-            Bandera=False
-        print("*************************")
+           print("*************************")   
+           break
+        
 def lenguajes_programacion_():
-    Bandera = True
-    while Bandera==True:
+    while True:
         lenguajes_conocidos = (input("Por favor ingrese el nombre de UN lenguaje de programacion que conozca: ")).lower().capitalize()
-        lenguajes_programacion[Nombre].append(lenguajes_conocidos)
+        lenguajes_programacion[Nombre]= [lenguajes_conocidos]
         option = input("Desea ingresar mas lenguajes(si/no): ").lower()
 
         if option == "si":
             lenguajes_conocidos = (input("Por favor ingrese el nombre de UN lenguaje de programacion que conozca: ")).lower().capitalize()
             lenguajes_programacion[Nombre].append(lenguajes_conocidos)
             option = input("Desea ingresar mas lenguajes(si/no): ").lower()
-
+            if option == "si":
+                pass
+            elif option == "no":
+                print("*********************")  
+                break
         elif option == "no":
-            Bandera=False
-            print("*********************")
+         print("*********************")   
+         break
+        
 def idiomas_():
-    Bandera = True
-    while Bandera==True:
+    while True:
         idiomas_conocidos = (input("Por favor ingrese UN idioma que conoce: ")).lower().capitalize()
-        idiomas[Nombre].append(idiomas_conocidos)
+        idiomas[Nombre]=[idiomas_conocidos]
         option = input("Desea ingresar mas idiomas(si/no): ").lower()
 
         if option == "si":
             idiomas_conocidos = (input("Por favor ingrese UN idioma que conoce: ")).lower().capitalize()
             idiomas[Nombre].append(idiomas_conocidos)
-            option = input("Desea ingresar mas idiomas(si/no): ").lower()
+            option = input("Desea ingresar mas idiomas(si/no)")
+            if option == "si":
+                pass
+            elif option == "no":
+                print("******************")
+                break
+
 
         elif option == "no":
-            Bandera=False
-        print("******************")
+            print("******************")
+            break
 def edad_():
     edad_actual = int(input("Por favor ingrese su edad:"))
 
