@@ -14,30 +14,34 @@
             <article>
                 <fieldset>
                     <legend>Formulario nueva corte</legend>
-                    <form action="#" method="post" enctype="multipart/form-data">
+                    <form action="#" method="post" enctype="multipart/form-data" required>
                             <div clase="Nombre">
                                 <label for="nombre">Escriba su(s) nombre(s)</label>
                                 <input type="text" name="nombre" id="nombre" placeholder="Obligatorio">
                             </div>
-
+                            <br>
                             <div clase="Apellido">
                                 <label for="apellido">Escriba su(s) apellido(s)</label>
                                 <input type="text" name="apellido" id="apellido" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Correo electronico">
                                 <label for="email">Ingrese su correo electronico:</label>
                                 <input type="email" name="email" id="email" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Contraseña">
                                 <label for="contraseña">Ingrese su contraseña:</label>
                                 <input type="text" name="contraseña" id="contraseña" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Confirmacion contraseña">
                                 <label for="contraseña_c">Confirme su contraseña:</label>
                                 <input type="text" name="contraseña_c" id="contraseña_c" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="municipio de residencia">
-                                <label for="municipio">Ingrese su municipio de residencia(obligatorio):</label>
+                                <label for="municipio">Seleccione su municipio de residencia(obligatorio):</label>
                                 <input list="municipio" placeholder="obligatorio" >
                                     <datalist id="municipio">
                                         <option disabled selected></option>
@@ -166,21 +170,25 @@
                                         <option value="Zaragoza">Zaragoza</option>
                                     </datalist>
                             </div>
+                            <br>
                             <div clase="celular">
-                                <label for="identificador_telefonico">seleccione su identificador telefonico(obligatorio)</label>
+                                <label for="identificador_telefonico">seleccione su identificador telefonico(obligatorio): </label>
                                 <span>+57(colombia)<input type="Radio" name="identificador_telefonico" id="identificador_telefonico" ></span>
                                 <br>
                                 <label for="celular">Ingrese su numero de celular:</label>
                                 <input type="number"name="celular" id="celular" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Fecha de nacimiento">
                                 <label for="f_nacimiento"> Seleccione su fecha de nacimiento:(obligatorio)</label>
                                 <input type="date" name="f_nacimiento" id="f_nacimiento" >
                             </div>
+                            <br>
                             <div clase="Color favorito">
                                 <label for="color">Ingrese su color favorito:</label>
                                 <input type="color" name="color" id="color" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Nivel educativo">
                                 <label for="n_educacion">Seleccione el ultimo nivel educativo alcanzado(obligatorio):</label>
                                 <input list="n_educacion" placeholder="Obligatorio">
@@ -202,38 +210,41 @@
                                     <option value="Otras">Otro</option>
                                 </datalist>
                             </div>
+                            <br>
                             <div clase="Adjuntar CV">
                                 <label for="cv">Adjunte su CV(obligatorio): </label>
                                 <input type="file" >
                             </div>
-                            </div>
+                            <br>
                             <div clase="Fecha inicio estudios">
                                 <label for="f_i_e">seleccion la fecha en la que inicio sus estudios(obligatorio):</label>
                                 <input type="date" placeholder="Obligatorio">
                             </div>
+                            <br>
                             <div clase="Descripcion de experiencia">
                                 <label for="d_e"> Describa su experiencia en Riwi</label>
                                 <br>
                                 <textarea name="d_e" id="d_e" cols="30" rows="10" placeholder="obligatorio"></textarea>
                             </div>
+                            <br>
                             <div clase="Foto de perfil">
                                 <label for="foto_perfil">Ingrese una foto suya(obligatorio):</label>
                                 <br>
                                 <input type="file">
                             </div>
+                            <br>
                             <div clase="terminos y condiciones">
                                 <span>termino y condiciones:</span><br>
-                                <a href="./src/pages/termino_condiciones.html"><button >Ir a ver los terminos y condiciones</button></a>
+                                <a href="../../Carpeta_HTML/06_ejercicio/src/pages/termino_condiciones.html" target="_blank">Ir a ver los terminos y condiciones</a>
                                 <br>
-                                <label for="">¿Acepta los terminos y condiciones?(obligatorio)</label><br>
+                                <label for="termino_condiciones">¿Acepta los terminos y condiciones?(obligatorio)</label><br>
 
-                                <span>Si
-                                <input type="checkbox">
+                                <span>
+                                    <input type="checkbox" name="termino_condiciones" id="termino_condiciones">¿Acepta?
                                 </span>
-                                <span>No
-                                    <input type="checkbox">
-                                </span>
-                                
+                            </div>
+                            <div>
+                                <button type="submit">Enviar informacion</button>
                             </div>
                     </form>
                 </fieldset>
