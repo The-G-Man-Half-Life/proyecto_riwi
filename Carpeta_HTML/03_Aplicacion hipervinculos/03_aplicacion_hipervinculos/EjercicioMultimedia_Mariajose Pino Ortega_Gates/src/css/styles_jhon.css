@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+main{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.body_Jhon{
+    background-image: url(../../public/img/fondo_jhonatan.jpeg);
+}
+
+header {
+    background-color: #6d4b43;
+    background: linear-gradient(145deg, #755048,  #3f2c27);
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+    & .anchor_home{
+        color: #361912;
+        margin-left: 6%;
+        font-weight: 800;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+    & a{
+        color: #cfaba3;
+        font-weight: 400;
+        margin-left: 6%;
+    }
+}
+
+main{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo_Jhon{
+    display: flex;
+    width: 100vw;
+    height: 90px;
+    font-family: "Alumni Sans Inline One", sans-serif;
+    font-weight: 400;
+    font-size: 400%;
+    font-style: bold;
+    color: #cdc6c4;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: #0e0e0d;
+}
+
+.local_Section{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.local_Title{
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e0d;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    font-family: "Alumni Sans Inline One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200%;
+    color: #cdc6c4;
+}
+
+.local_Jhon{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.cancionJhon{
+    background-color: #0e0e0d;
+    margin-left: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 300px;
+    & h4{
+        display: flex;
+        margin-top: 10px;
+        font-family: "Alumni Sans Inline One", sans-serif;
+        font-weight: 100;
+        justify-content: center;
+        margin-left: 40px;
+        margin-right: 20px;
+        font-size: x-large;
+        color: #cdc6c4;
+    }
+    & img{
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+        width: 220px;
+        height: 170px;
+    }
+    & video{
+        width: 220px;
+        height: 170px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    & audio{
+        width: 220px;
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    
+}
+
+.online_Section{
+    width: 100vw;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.online_Title{
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e0d;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    font-family: "Alumni Sans Inline One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200%;
+    color: #cdc6c4;
+}
+
+.online_Jhon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    justify-content: space-around;
+}
+
+.cancion_JhonO{
+    background-color: #0e0e0d;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 380px;
+    & h4{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        font-family: "Alumni Sans Inline One", sans-serif;
+        font-weight: 100;
+        justify-self: center;
+        margin-left: 40px;
+        margin-right: 20px;
+        font-size: x-large;
+        color: #cdc6c4;
+    }
+    & img{
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+        width: 150px;
+        height: 150px;
+    }
+    & .video_youtube{
+        width: 300px;
+        height: 170px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    & .audio_spotify{
+        width: 300px;
+        margin-left: 40px;
+    }
+}

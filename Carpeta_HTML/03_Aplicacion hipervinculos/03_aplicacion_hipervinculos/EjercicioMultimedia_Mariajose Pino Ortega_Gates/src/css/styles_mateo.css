@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+main{
+    flex-wrap: wrap;
+    display: flex;
+}
+.body_mateo{
+    background-image: url(../../public/img/fondo_mateo.jpg);
+}
+header {
+    background-color: #6d4b43;
+    background: linear-gradient(145deg, #755048,  #3f2c27);
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+    & .anchor_home{
+        color: #361912;
+        margin-left: 6%;
+        font-weight: 800;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+    & a{
+        color: #cfaba3;
+        font-weight: 400;
+        margin-left: 6%;
+    }
+}
+main{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+}
+.titulo_mat{
+    width: 100vw;
+}
+.titulo_Mateo{
+    width: 100vw;
+    font-family: Comic Sans MS;
+    font-weight: 400;
+    font-size: 400%;
+    font-style: bold;
+    color: #1b3d9a;
+    background-color: #ecb778;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+.local_Section{
+    width: 100vw;
+}
+.local_Title{
+    background-color: #ecb778;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    font-family: Comic Sans MS;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200%;
+    color: #1b3d9a;
+}
+.local_Mateo{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    justify-content: space-around;
+}
+.cancionMateo{
+    background-color: #c67f15;
+    margin-left: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 300px;
+    & h4{
+        margin-top: 10px;
+        font-family: Comic Sans MS;
+        font-weight: 100;
+        justify-self: center;
+        margin-left: 40px;
+        margin-right: 20px;
+        font-size: x-large;
+        color: #1b3d9a;
+    }
+    & img{
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+        width: 220px;
+        height: 170px;
+    }
+    & video{
+        width: 220px;
+        height: 170px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    & audio{
+        width: 220px;
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    
+}
+.online_Section{
+    width: 100vw;
+    margin-top: 40px;
+}
+.online_Title{
+    background-color: #ecb778;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    font-family: Comic Sans MS;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200%;
+    color: #1b3d9a;
+}
+.online_Mateo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    justify-content: space-around;
+}
+.cancionMateoO{
+    background-color: #c67f15;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 500px;
+    & h4{
+        margin-top: 10px;
+        font-family: Comic Sans MS;
+        font-weight: 100;
+        justify-self: center;
+        margin-left: 40px;
+        margin-right: 20px;
+        font-size: x-large;
+        color: #1b3d9a;
+    }
+    & img{
+        margin-top: 20px;
+        margin-left: 40px;
+        justify-self: center;
+        width: 150px;
+        height: 150px;
+    }
+    & .video_youtube{
+        width: 300px;
+        height: 170px;
+        margin-left: 40px;
+        justify-self: center;
+    }
+    & .audio_spotify{
+        width: 300px;
+        margin-left: 40px;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+    <section>
+      <fieldset>
+        <legend>Datos de la mascota</legend>
+        <form action="../05_Formularios/source/pages/server.html" method="post" enctype="multipart/form-data">
+          <div>
+            <label for="nombre_mascota">nombre de la mascota:</label>
+            <input type="text" name="nombre_mascota" id="nombre_mascota" placeholder="nombre de la mascota">
+          </div>
+          <br>
+          <div>
+            <label for="peso_mascota">Peso de la mascota:</label>
+            <input type="number" name="peso_mascota" id="peso_mascota" placeholder="Ingrese el nombre de su mascota">
+          </div>
+          <br>
+          <div>
+            <label for="edad_mascota">Ingrese la fecha de nacimiento de su mascota:</label>
+            <input type="date" name="edad_mascota" id="edad_mascota" placeholder="Ingrese la fecha">
+            <input type="time" name="tiempo_ mascota">
+          </div>
+          <br>
+          <div>
+            <label for="foto_mascota">Ingrese foto de su mascota:</label>
+            <input type="url" name="foto_mascota" id="foto_mascota" placeholder="url de la foto">
+          </div>
+          <br>
+          <div>
+            <label for="foto_mascota2">Ingrese foto de su mascota:</label>
+            <input type="file" name="foto_mascota2" id="foto_mascota2" placeholder="seleccione la foto">
+          </div>
+          <br>
+          <div>
+            <label for="caracteristicas">Caracteristicas:</label><br>
+            <span>
+              <input type="checkbox" name="caracteristicas" id="caracteristicas">Con manchas
+            </span>
+            <br>
+            <span>
+              <input type="checkbox" name="caracteristicas" id="caracteristicas">Rayado
+            </span>
+            <br>
+            <span>
+              <input type="checkbox" name="caracteristicas" id="caracteristicas">Sin pelo
+            </span>
+          </div>
+          <br>
+          <div>
+            <label for="genero_mascota">Ingrese el genero de su mascota:</label><br>
+            <span>Macho<input type="radio" name="genero_mascota" id="genero_mascota"></span>
+            <span>Hembra<input type="radio" name="genero_mascota" id="genero_mascota"></span>
+            <span>Prefiero no decir<input type="radio" name="genero_mascota" id="genero_mascota"></span>
+          </div>
+          <br>
+          <div>
+            <label for="color_mascota">Ingrese el color de su mascota:</label>
+            <input type="color" name="color_mascota" id="color_mascota">
+          </div>
+          <br>
+          <div>
+            <label for="operaciones">operaciones realizadas:</label>
+            <input type="range" name="operaciones" id="operaciones">
+          </div>
+          <br>
+          <div>
+            <label for="comentario">Comentarios de la mascota:</label><br>
+            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+          </div>
+          <br>
+          <button type="submit">Enviar datos</button>
+
+        </form>
+      </fieldset>
+    </section>
+    <section>
+      <fieldset>
+        <legend>Datos del dueño</legend>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div>
+            <label for="nombre">Ingrese su nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+          </div>
+          <br>
+          <div>
+            <label for="apellido">Ingrese su apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+          </div>
+          <br>
+          <div>
+            <label for="rango_programador">Ingrese su rango de programador:</label>
+            <input type="range" name="rango_programador" id="rango_programador" min="1" max="3">
+          </div>
+          <br>
+          <div>
+            <label for="tipo_documento">ingrese su tipo de documento:</label>
+            <input list="tipo_documento" placeholder="tipo documento">
+            <datalist id="tipo_documento">
+              <option disabled selected></option>
+              <option value="CC">Cedula</option>
+              <option value="TI">Tarjeta de Identidad</option>
+              <option value="PA">Pasaporte</option>
+            </datalist>
+            <!--<input type="text" name="tipo_documento" id="tipo_documento" placeholder="Ingrese su tipo de documento">
+            <select name="tipo_documento" id="tipo_documento">
+              <option value="CC">Cedula</option>
+              <option value="TI">Tarjeta de Identidad</option>
+              <option value="PA">Pasaporte</option>
+            </select> -->
+          </div>
+
+          <br>
+          <div>
+            <label for="documento">Ingrese el numero de documento:</label>
+            <input type="number" name="documento" id="documento" placeholder="Ingrese el numero de su documento">
+          </div>
+          <br>
+
+          <div>
+            <label for="correo">Ingrese su correo:</label>
+            <input type="email" name="correo" id="correo" placeholder="Ingrese su correo electronico">
+          </div>
+
+          <br>
+          <div>
+            <label for="telefono">Ingrese su numero telefonico:</label>
+            <input list="indicativo_telefonico" placeholder="indicativo telefonico">
+            <datalist id="indicativo_telefonico">
+              <option disabled selected></option>
+              <option value="+57">colombia</option>
+              <option value="+58">Peru</option>
+            </datalist>
+            <input type="text" name="telefono" id="telefono" placeholder="Ingrese su numero">
+          </div>
+          <br>
+          <div>
+            <label for="direccion">Ingrese su direccion de residencia:</label>
+            <input type="text" name="direccion" id="direccion" placeholder="Ingrese su direccion">
+          </div>
+          <br>
+
+          <br>
+          <div>
+            <button type="submit">subir información</button>
+          </div>
+
+
+        </form>
+      </fieldset>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>
